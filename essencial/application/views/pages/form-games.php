@@ -20,6 +20,13 @@
 
 					<div class="col-md-6">
 						<div class="form-group">
+							<label for="category">Categoria</label>
+							<input type="text" class="form-control" name="category" id="category" placeholder="Categoria" required value="<?= isset($game) ? $game["category"] : '' ?>">
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="form-group">
 							<label for="description">Descrição</label>
 							<textarea name="description" id="description" rows="5" class="form-control" required><?= isset($game) ? $game["description"] : '' ?></textarea>
 						</div>

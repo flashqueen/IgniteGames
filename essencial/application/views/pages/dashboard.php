@@ -20,9 +20,9 @@
 					<th>#</th>
 					<th>Nome</th>
 					<th>Preço</th>
-					<th>Desenvolvedor</th>
+					<th>Categoria</th>
 					<th>Data de Lançamento</th>
-					<th>Actions</th>
+					<th>Ações</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -31,7 +31,7 @@
 						<td><?=$game['id'] ?></td>
 						<td><?=$game['name'] ?></td>
 						<td><?= reais($game["price"]) ?></td>
-						<td><?=$game['developer'] ?></td>
+						<td><?=$game['category'] ?></td>
 						<td><?=$game['release_date'] ?></td>
 						<td>
 							<?php if($_SESSION["logged_user"]["id"] === $game["user_id"] || $_SESSION["logged_user"]["roles"] == 1) : ?>

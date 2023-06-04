@@ -10,20 +10,24 @@
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
-					<th>#</th>
+				<th>#</th>
 					<th>Nome</th>
 					<th>Preço</th>
+					<th>Categoria</th>
+					<th>Descrição</th>
 					<th>Desenvolvedor</th>
 					<th>Data de Lançamento</th>
-					<th>Actions</th>
+					<th>Ações</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php foreach($result as $game) :?>
 					<tr>
-						<td><?=$game['id'] ?></td>
+					<td><?=$game['id'] ?></td>
 						<td><?=$game['name'] ?></td>
 						<td><?= reais($game["price"]) ?></td>
+						<td><?=$game['category'] ?></td>
+						<td><?=$game['description'] ?></td>
 						<td><?=$game['developer'] ?></td>
 						<td><?=$game['release_date'] ?></td>
 						<td>

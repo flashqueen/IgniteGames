@@ -14,7 +14,9 @@
 					<th>Nome</th>
 					<th>Preço</th>
 					<th>Categoria</th>
+					<th>Descrição</th>
 					<th>Desenvolvedor</th>
+					<th>Data de Lançamento</th>
 					<th>Ações</th>
 				</tr>
 			</thead>
@@ -24,15 +26,17 @@
 						<td><?=$game['id'] ?></td>
 						<td><?=$game['name'] ?></td>
 						<td><?= reais($game["price"]) ?></td>
+						<td><?=$game['category'] ?></td>
+						<td><?=$game['description'] ?></td>
 						<td><?=$game['developer'] ?></td>
 						<td><?=$game['release_date'] ?></td>
 						<td>
 							<?php if($_SESSION["logged_user"]["roles"] == 1 || $_SESSION["logged_user"]["id"] === $game["user_id"]) : ?>
-								<a href="<?= base_url() ?>games/edit/<?= $game["id"] ?>" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
-								<a href="javascript:goDelete(<?= $game['id'] ?>)" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
+								<a href="<?= base_url() ?>games/edit/<?= $game["id"] ?>" class="btn btn-warning btn-sm m-1"><i class="fas fa-pencil-alt"></i></a>
+								<a href="javascript:goDelete(<?= $game['id'] ?>)" class="btn btn-sm btn-danger m-1"><i class="fas fa-trash-alt"></i></a>
 							<?php else : ?>
-								<button disabled type="button" class="btn btn-warning btn-sm mr-1"><i class="fas fa-pencil-alt"></i></a>
-								<button disabled type="button" class="btn btn-danger btn-sm mr-1"><i class="fas fa-trash-alt"></i></a>
+								<button disabled type="button" class="btn btn-warning btn-sm m-1"><i class="fas fa-pencil-alt"></i></a>
+								<button disabled type="button" class="btn btn-danger btn-sm m-1"><i class="fas fa-trash-alt"></i></a>
 							<?php endif; ?>
 						</td>
 					</tr>

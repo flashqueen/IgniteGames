@@ -7,4 +7,5 @@
             $user = $this->db->get("tb_users")->row_array();
             return $user;
         }
+
     }

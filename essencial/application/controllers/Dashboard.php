@@ -15,6 +15,11 @@ class Dashboard extends CI_Controller {
 		$dados["users"]  = $this->users_model->dashboard_index();
 		$data['title'] = 'Dashboard - IgniteGames';
 
+		// print "<pre>";
+		// print_r($_SESSION);
+		// print "</pre>";
+		// exit();
+
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
 		$this->load->view('pages/dashboard', $dados);

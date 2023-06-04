@@ -1,5 +1,5 @@
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="<?= base_url()?>">IgniteGames</a>
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="<?= base_url()?>"> IgniteGames</a>
 	<div>
 		<form action="<?= base_url()?>dashboard/pesquisar" method="post">
 			<input class="form-control form-control-dark" type="text" name="busca" id="busca" placeholder="Pesquisar Jogo" aria-label="Search" value="">
@@ -36,10 +36,17 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url() ?>users">
-              <span data-feather="shopping-cart"></span>
-              Usuários
-            </a>
+            <?php if($_SESSION["logged_user"]["roles"] == 1) : ?>
+              <a class="nav-link" href="<?= base_url() ?>users">
+                <span data-feather="shopping-cart"></span>
+                Usuários
+              </a>
+            <?php else : ?>
+              <a style="color:#6b7280;" class="nav-link" href="#">
+                <span data-feather="shopping-cart"></span>
+                Usuários
+              </a>
+            <?php endif; ?>
 					</li>
 					<li class="nav-item">
             <a class="nav-link" href="<?= base_url() ?>games/mygames">

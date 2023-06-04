@@ -27,10 +27,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             ))->row_array();
         }
 
-        public function update($id, $game)
+        public function update($id, $user)
         {
             $this->db->where("id", $id);
-            return $this->db->update("tb_users", $game);
+            return $this->db->update("tb_users", $user);
         }
         
     }

@@ -14,9 +14,14 @@ class Signup extends CI_Controller {
 		$this->load->model("users_model");
 		$user = array(
 			"name" => $_POST["name"],
-			"country" => $_POST["country"],
-			"email" => $_POST["email"],
 			"password" => md5($_POST["password"]),
+			"email" => $_POST["email"],
+			"country" => $_POST["country"],
+			"state" => $_POST["state"],
+			"city" => $_POST["city"],
+			"age" => $_POST["age"],
+			
+			
 		);
 
 		$this->users_model->store($user);

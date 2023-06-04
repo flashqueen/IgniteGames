@@ -11,6 +11,10 @@
 					<th>Nome</th>
 					<th>Email</th>
 					<th>País</th>
+                    <th>Estado</th>
+                    <th>Cidade</th>
+                    <th>Idade</th>
+                    <th>Ações</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -20,6 +24,12 @@
 						<td><?= $user["name"] ?></td>
 						<td><?= $user["email"] ?></td>
 						<td><?= $user["country"] ?></td>
+                        <td><?= $user["state"] ?></td>
+                        <td><?= $user["city"] ?></td>
+                        <td><?= $user["age"] ?></td>
+                        <td>
+							<a href="<?= base_url() ?>users/edit/<?= $user["id"] ?>" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
+						</td>
 					</tr>
 				<?php endforeach; ?>
 			</tbody>

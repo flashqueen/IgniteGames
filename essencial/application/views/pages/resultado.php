@@ -1,11 +1,8 @@
-
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 		<h1 class="h2"><?= $title ?></h1>
-		<div class="btn-toolbar mb-2 mb-md-0">
 			<div class="btn-group mr-2">
 				<a href="<?= base_url() ?>games/new" class="btn btn-sm btn-outline-secondary"><i class="fas fa-plus-square"> Adicionar Jogo</i></a>
-			</div>
 		</div>
 	</div>
 
@@ -30,7 +27,7 @@
 						<td><?=$game['developer'] ?></td>
 						<td><?=$game['release_date'] ?></td>
 						<td>
-                            <?php if($_SESSION["logged_user"]["id"] === $game["user_id"]) : ?>
+                            <?php if($_SESSION["logged_user"]["id"] === $game["user_id"] || $_SESSION["logged_user"]["roles"] == 1) : ?>
 								<a href="<?= base_url() ?>games/edit/<?= $game["id"] ?>" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
 								<a href="javascript:goDelete(<?= $game['id'] ?>)" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
 							<?php else : ?>

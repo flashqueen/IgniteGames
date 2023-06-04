@@ -41,16 +41,28 @@
       <h1 class="h3 mb-3 font-weight-normal">Dados Pessoais: </h1>
 
       <label for="inputName" class="sr-only">Nome</label>
-      <input type="text" name="name" id="inputName" class="form-control" placeholder="Your Name" required autofocus>
+      <input type="text" name="name" id="inputName" class="form-control" placeholder="Nome" required autofocus>
 
-      <label for="inputCountry" class="sr-only">País</label>
-      <input type="text" name="country" id="inputCountry" class="form-control" placeholder="Country" required autofocus>
       
       <label for="inputEmail" class="sr-only">Email</label>
-      <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+      
+      <label for="inputCountry" class="sr-only">País</label>
+      <input type="text" name="country" id="inputCountry" class="form-control" placeholder="País" required autofocus>
+      
+      <label for="inputState" class="sr-only">Estado</label>
+      <input type="text" name="state" id="inputState" class="form-control" placeholder="Estado" required autofocus>
+      
+      <label for="inputCity" class="sr-only">Cidade</label>
+      <input type="text" name="city" id="inputCity" class="form-control" placeholder="Cidade" required autofocus>
+      
+      <label for="inputAge" class="sr-only">Idade</label>
+      <input type="text" name="age" id="inputAge" class="form-control" placeholder="Idade" required autofocus>
       
       <label for="inputPassword" class="sr-only">Senha</label>
-      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+      
+      
       
       <p>
         <a href="<?= base_url()?>login">Já tenho uma conta</a>

@@ -8,6 +8,7 @@ class Users extends CI_Controller
 	{
 		parent::__construct();
 		permission();
+		userPermission();
 		$this->load->model("users_model");
 	}
 
